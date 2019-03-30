@@ -10,6 +10,7 @@ public class Main {
     ArrayList<Administration> admins = new ArrayList<Administration>();
     ArrayList<Nurse> nurses = new ArrayList<Nurse>();
     ArrayList<Doctor> doctors = new ArrayList<Doctor>();
+    ArrayList<Patients> patients = new ArrayList<Patients>();
     
     public static void main(String args[]){
         Main main = new Main();
@@ -56,6 +57,7 @@ public class Main {
             System.out.println("5 - Print the doctor information");
             System.out.println("6 - Print the patient information");
             System.out.println("7 - Exit the program");
+            System.out.print("Choose number : ");
             
             int choose = sc.nextInt();
             
@@ -166,13 +168,33 @@ public class Main {
                         stringAnswer = sc.next();
                         patient.setPhone(stringAnswer);
                         
-                        System.out.println();
-                        System.out.println();
+                        System.out.println("Enter Email: ");
+                        stringAnswer = sc.next();
+                        patient.setEmail(stringAnswer);
+                        
+                        System.out.println("Enter type (A or B) : ");
+                        stringAnswer = sc.next();
+                        patient.setType(stringAnswer);
+                        
+                        patients.add(patient);
+                        
                         break;                     
                     case 5: 
                         // هنا طباعة معلومات الأطباء
+                        // ننتبه أننا استخدمنا الدالة 
+                        // toString()
+                        // و الموجودة بداخل الكلاس والتي تطبع لنا جميع المعلومات الخاصة بالكلاس
                         for(int i = 0; i < doctors.size(); i++){
                             System.out.println(doctors.get(i).toString());
+                        }
+                        break;
+                    case 6:
+                        // هنا طباعة معلومات المرضى كلهم
+                        // ننتبه أننا استخدمنا الدالة 
+                        // toString()
+                        // و الموجودة بداخل الكلاس والتي تطبع لنا جميع المعلومات الخاصة بالكلاس
+                        for(int i = 0; i < patients.size(); i++){
+                            System.out.println(patients.get(i).toString());
                         }
                         break;
                     case 7: 

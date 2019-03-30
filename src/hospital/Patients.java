@@ -81,5 +81,11 @@ public class Patients {
     public void setServices(ArrayList<Service> services) {
         this.services = services;
     }
+    
+    
+     @Override
+    public String toString() {
+        return "ID: "+this.ID+"\nName: "+this.name+"\nAddress : "+this.address+"\nPhone : "+this.phone+"\nEmail: "+this.email+"\nType "+"\n************************************\n";
+    }
         
 }
