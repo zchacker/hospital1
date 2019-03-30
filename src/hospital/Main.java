@@ -11,6 +11,7 @@ public class Main {
     ArrayList<Nurse> nurses = new ArrayList<Nurse>();
     ArrayList<Doctor> doctors = new ArrayList<Doctor>();
     ArrayList<Patients> patients = new ArrayList<Patients>();
+    ArrayList<Service> services = new ArrayList<Service>();
     
     public static void main(String args[]){
         Main main = new Main();
@@ -178,7 +179,24 @@ public class Main {
                         
                         patients.add(patient);
                         
-                        break;                     
+                        break; 
+                    case 3:
+                        Service service = new Service();
+                        
+                        System.out.println("Enter ID: ");
+                        intAnswer = sc.nextInt();
+                        service.setID(intAnswer);
+                        
+                        System.out.println("Enter Name: ");
+                        stringAnswer = sc.next();
+                        service.setName(stringAnswer);
+                        
+                        System.out.println("Enter Price: ");
+                        intAnswer = sc.nextInt();
+                        service.setPrice(intAnswer);
+                        
+                        services.add(service);
+                        break;
                     case 5: 
                         // هنا طباعة معلومات الأطباء
                         // ننتبه أننا استخدمنا الدالة 

@@ -83,7 +83,8 @@ public class Patients {
     }
     
     
-     @Override
+    // هذه الدالة تطبع المعلومات الخاصة بالكلاس
+    @Override
     public String toString() {
         return "ID: "+this.ID+"\nName: "+this.name+"\nAddress : "+this.address+"\nPhone : "+this.phone+"\nEmail: "+this.email+"\nType "+"\n************************************\n";
     }

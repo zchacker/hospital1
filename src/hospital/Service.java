@@ -39,6 +39,12 @@ public class Service {
     public void setPrice(int price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "ID : "+this.ID+"\nName: "+this.name+"\nPrice: "+this.price+"\n";
+    }
+    
     
     
 }
