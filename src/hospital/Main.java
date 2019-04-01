@@ -200,7 +200,8 @@ public class Main {
                     case 4:
                         
                         boolean patientFound = false;
-                        int  patient_index = 0; // هذا اوبجيكت خاص بالمريض نخزنه 
+                        int  patient_index = 0; // هذا رقم المريض في المصفوفة
+                        
                         while(true){
                             // يدخل اسم المريض
                             // ورقم الاي دي 
@@ -222,18 +223,53 @@ public class Main {
                             else 
                                 continue;
                         }
+                        //نختبر هل توجد خدمات ام لا
                         
-                        System.out.println("Choose one of thsee services : -");
-                        for(int i = 0; i < services.size(); i++){
-                            System.out.println( i + ")" + services.get(i).getName() + " -- " + services.get(i).getPrice());
-                        }
-                        
-                        int ch = sc.nextInt();
-                        if(ch > services.size()){
-                            System.out.println("Incorrect choose !");
+                        if(services.size() > 0){
+                            // هنا فقط نعرض للمريض الخدمات المتاحة في النظام
+                            System.out.println("Choose one of thsee services : -");
+                            for(int i = 0; i < services.size(); i++){
+                                // استخدمت دالة 
+                                // toLowerCase
+                                // حتى اجعل الحروف صغيرة لتكون المقارنة صحيحة في حالة ان المستخدم ادخل حرف كبير
+                                if(patients.get(patient_index).getType().toLowerCase().equals("a")){
+                                    
+                                    // حتى نحسب الخصم 
+                                    // نضرب  المبلغ الاجمالي في  
+                                    // 25
+                                    // ثم نقسم على  
+                                    // 100
+                                    // بعدها ينتج لنا العدد الذي يمثل النسبة 
+                                    // نقوم بخصمه من المبلغ الكبير الاجمالي فنحصل على الاجمالي بعد الخصم
+                                    int discount = ((25 * services.get(i).getPrice()) / 100);// هنا نحسب كم المبلغ المطلوب خصمة 
+                                    int total_after_discount = services.get(i).getPrice() - discount;
+                                    
+                                    System.out.println( i + ")" + services.get(i).getName() + " -- " + services.get(i).getPrice() + " after discount = "+ total_after_discount);
+                                }else{
+                                    System.out.println( i + ")" + services.get(i).getName() + " -- " + services.get(i).getPrice());
+                                }
+                            }
+
+                            int ch = sc.nextInt();
+                            if(ch > services.size()){
+                                System.out.println("Incorrect choose !");
+                            }else{
+                                if(patients.get(patient_index).getType().toLowerCase().equals("a")){
+                                    int discount = ((25 * services.get(ch).getPrice()) / 100);// هنا نحسب كم المبلغ المطلوب خصمة 
+                                    int total_after_discount = services.get(ch).getPrice() - discount;
+                                    
+                                    Service se = services.get(ch);
+                                    se.setPrice(total_after_discount);// هنا السعر بعد التعديل
+                                    patients.get(patient_index).add_service(se);
+                                }else{
+                                    patients.get(patient_index).add_service(services.get(ch));
+                                }
+                                
+                            }
                         }else{
-                            patients.get(patient_index).add_service(services.get(ch));
+                            System.out.println("No Services found!");
                         }
+
                         
                         break;
                     case 5: 
