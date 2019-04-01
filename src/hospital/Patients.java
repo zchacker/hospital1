@@ -82,6 +82,9 @@ public class Patients {
         this.services = services;
     }
     
+    public void add_service(Service service){
+        this.services.add(service);
+    }
     
     // هذه الدالة تطبع المعلومات الخاصة بالكلاس
     @Override

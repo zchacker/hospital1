@@ -197,6 +197,45 @@ public class Main {
                         
                         services.add(service);
                         break;
+                    case 4:
+                        
+                        boolean patientFound = false;
+                        int  patient_index = 0; // هذا اوبجيكت خاص بالمريض نخزنه 
+                        while(true){
+                            // يدخل اسم المريض
+                            // ورقم الاي دي 
+                            System.out.println("Enter patient name : ");
+                            String name = sc.next();
+                            System.out.println("Enter ID : "); 
+                            int id = sc.nextInt();
+                            
+                            for(int i = 0; i < patients.size(); i++ ){
+                                if(patients.get(i).getName().equals(name) && patients.get(i).getID() == id){
+                                    patient_index = i;
+                                    patientFound = true;
+                                    break;
+                                }
+                            }
+                            
+                            if(patientFound)
+                                break;
+                            else 
+                                continue;
+                        }
+                        
+                        System.out.println("Choose one of thsee services : -");
+                        for(int i = 0; i < services.size(); i++){
+                            System.out.println( i + ")" + services.get(i).getName() + " -- " + services.get(i).getPrice());
+                        }
+                        
+                        int ch = sc.nextInt();
+                        if(ch > services.size()){
+                            System.out.println("Incorrect choose !");
+                        }else{
+                            patients.get(patient_index).add_service(services.get(ch));
+                        }
+                        
+                        break;
                     case 5: 
                         // هنا طباعة معلومات الأطباء
                         // ننتبه أننا استخدمنا الدالة 
