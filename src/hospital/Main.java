@@ -269,8 +269,18 @@ public class Main {
                         }else{
                             System.out.println("No Services found!");
                         }
-
                         
+                        // هنا طباعة الفاتورة الخاصة بالمريض
+                        System.out.println("******************************");
+                        System.out.println("* \t\t Bill \t\t *");
+                        int total_bill = 0;// هنا اجمالي الفاتورة
+                        for(int i = 0 ; i < patients.get(patient_index).getServices().size(); i++){
+                            System.out.println("Service Name : " + patients.get(patient_index).getServices().get(i).getName() + " --- " + patients.get(patient_index).getServices().get(i).getPrice());
+                            total_bill += patients.get(patient_index).getServices().get(i).getPrice();
+                        }   
+                        
+                        System.out.println("Totla Bill : " + total_bill);
+                        System.out.println("*****************************");
                         break;
                     case 5: 
                         // هنا طباعة معلومات الأطباء
