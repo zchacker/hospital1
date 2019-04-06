@@ -63,45 +63,85 @@ public class Hospital {
             int choose = sc.nextInt();
 
             try {
+                String stringAnswer = "";// هذا المتغير يستقبل النص الحرفي من المستخدم في الجافا
+                int intAnswer = 0;// هذا المتغير يستقبل الارقام من المستخدم و يخزنها
+
                 // هنا نأخذ المدخل الخاص بالمستخدم 
                 switch (choose) {
                     case 1:
 
                         Doctor doctor = new Doctor();// انشاء اوجيكت الدكتور
 
-                        String stringAnswer;// هذا المتغير يستقبل النص الحرفي من المستخدم في الجافا
-                        int intAnswer;// هذا المتغير يستقبل الارقام من المستخدم و يخزنها
-
                         System.out.print("Enter ID : ");
-                        intAnswer = sc.nextInt();
+                        try {
+                            intAnswer = sc.nextInt();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         doctor.setID(intAnswer);
 
                         System.out.print("Enter name : ");
-                        stringAnswer = sc.next();
+                        try {
+                            stringAnswer = sc.next();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         doctor.setName(stringAnswer);
 
                         System.out.print("Enter address : ");
-                        stringAnswer = sc.next();
+                        try {
+                            stringAnswer = sc.next();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         doctor.setAddress(stringAnswer);
 
                         System.out.print("Enter phone : ");
-                        stringAnswer = sc.next();
+                        try {
+                            stringAnswer = sc.next();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         doctor.setPhone(stringAnswer);
 
                         System.out.print("Enter email : ");
-                        stringAnswer = sc.next();
+                        try {
+                            stringAnswer = sc.next();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         doctor.setEmail(stringAnswer);
 
                         System.out.print("Enter salary : ");
-                        intAnswer = sc.nextInt();
+                        try {
+                            intAnswer = sc.nextInt();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         doctor.setSalary(intAnswer);
 
                         System.out.print("Enter specialty: ");
-                        stringAnswer = sc.next();
+                        try {
+                            stringAnswer = sc.next();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         doctor.setSpecialty(stringAnswer);
 
                         System.out.print("Enter rank: ");
-                        intAnswer = sc.nextInt();
+                        try {
+                            intAnswer = sc.nextInt();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         doctor.setRank(intAnswer);
 
                         System.out.println("Nurse information:- ");
@@ -109,35 +149,75 @@ public class Hospital {
                         Nurse nurse = new Nurse();// انشاء اوبجيكت الممرضة
 
                         System.out.print("Enter nurse ID: ");
-                        intAnswer = sc.nextInt();
+                        try {
+                            intAnswer = sc.nextInt();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         nurse.setID(intAnswer);
 
                         System.out.print("Enter nurse Name: ");
-                        stringAnswer = sc.next();
+                        try {
+                            stringAnswer = sc.next();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         nurse.setName(stringAnswer);
 
                         System.out.print("Enter nurse address: ");
-                        stringAnswer = sc.next();
+                        try {
+                            stringAnswer = sc.next();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         nurse.setAddress(stringAnswer);
 
                         System.out.print("Enter nurse phone: ");
-                        stringAnswer = sc.next();
+                        try {
+                            stringAnswer = sc.next();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         nurse.setPhone(stringAnswer);
 
                         System.out.print("Enter nurse email: ");
-                        stringAnswer = sc.next();
+                        try {
+                            stringAnswer = sc.next();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         nurse.setEmail(stringAnswer);
 
                         System.out.print("Enter nurse salary: ");
-                        intAnswer = sc.nextInt();
+                        try {
+                            intAnswer = sc.nextInt();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         nurse.setSalary(intAnswer);
 
                         System.out.println("Enter nurse specialty");
-                        stringAnswer = sc.next();
+                        try {
+                            stringAnswer = sc.next();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         nurse.setSpecialty(stringAnswer);
 
                         System.out.println("Enter nurse rank");
-                        intAnswer = sc.nextInt();
+                        try {
+                            intAnswer = sc.nextInt();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         nurse.setRank(intAnswer);
 
                         doctor.setNurse(nurse);
@@ -151,27 +231,57 @@ public class Hospital {
 
                         System.out.println("Enter patient information:- ");
                         System.out.println("Enter ID :");
-                        intAnswer = sc.nextInt();
+                        try {
+                            intAnswer = sc.nextInt();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         patient.setID(intAnswer);
 
                         System.out.println("Enter name: ");
-                        stringAnswer = sc.next();
+                        try {
+                            stringAnswer = sc.next();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         patient.setName(stringAnswer);
 
                         System.out.println("Enter Address: ");
-                        stringAnswer = sc.next();
+                        try {
+                            stringAnswer = sc.next();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         patient.setAddress(stringAnswer);
 
                         System.out.println("Enter Phone: ");
-                        stringAnswer = sc.next();
+                        try {
+                            stringAnswer = sc.next();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         patient.setPhone(stringAnswer);
 
                         System.out.println("Enter Email: ");
-                        stringAnswer = sc.next();
+                        try {
+                            stringAnswer = sc.next();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         patient.setEmail(stringAnswer);
 
                         System.out.println("Enter type (A or B) : ");
-                        stringAnswer = sc.next();
+                        try {
+                            stringAnswer = sc.next();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         patient.setType(stringAnswer);
 
                         patients.add(patient);
@@ -181,21 +291,65 @@ public class Hospital {
                         Service service = new Service();
 
                         System.out.println("Enter ID: ");
-                        intAnswer = sc.nextInt();
+                        try {
+                            intAnswer = sc.nextInt();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         service.setID(intAnswer);
 
                         System.out.println("Enter Name: ");
-                        stringAnswer = sc.next();
+                        try {
+                            stringAnswer = sc.next();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         service.setName(stringAnswer);
 
                         System.out.println("Enter Price: ");
-                        intAnswer = sc.nextInt();
+                        try {
+                            intAnswer = sc.nextInt();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                         service.setPrice(intAnswer);
 
-                        services.add(service);
+                        System.out.println("Select Doctor from list :- ");
+                        // هنا نعرض الأطباء
+                        for (int i = 0; i < doctors.size(); i++) {
+                            System.out.println(i + ") Doctor Name : " + doctors.get(i).getName());
+                        }
+
+                        // هنا يجب اختيار طبيب
+                        System.out.print("Select Doctor : ");
+                        try {
+                            intAnswer = sc.nextInt();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
+                        // نختبر اذا اختار الرقم صح أو لا الرقم لازم يكون نفس حجم المصفوفة ولا يكون اكبر منها
+                        if (intAnswer < doctors.size()) {
+                            service.setDoctor(doctors.get(intAnswer));
+                            services.add(service);
+                        } else {
+                            // في حالة اختار رقم خطأ تعطيه رسالة غلط
+                            System.out.println("Pleas choose right doctor");
+                        }
+
                         break;
                     case 4:
-
+                       
+                        /**
+                         * ######################################
+                           #                                    #
+                           #            Part One                #   
+                           ######################################
+                         */
+                        
                         // هذا الجزء خاص بطباعة فاتورة المريض
                         boolean patientFound = false; // هذا حتى نعرف اذا كان المريض موجود ام لا
                         int patient_index = 0; // هذا رقم المريض في المصفوفة
@@ -203,10 +357,24 @@ public class Hospital {
                         // يدخل اسم المريض
                         // ورقم الاي دي 
                         System.out.println("Enter patient name : ");
-                        String name = sc.next();
-                        System.out.println("Enter ID : ");
-                        int id = sc.nextInt();
+                        String name = "";
+                        try {
+                            name = sc.next();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
 
+                        System.out.println("Enter ID : ");
+                        int id = 0;
+                        try {
+                            id = sc.nextInt();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        
+                        // بعد اخذنا معلومات المريض نقوم بالبحث هل هو موجود أم لا
+                        
+                        // هنا البحث 
                         for (int i = 0; i < patients.size(); i++) {
                             if (patients.get(i).getName().equals(name) && patients.get(i).getID() == id) {
                                 patient_index = i;
@@ -214,18 +382,21 @@ public class Hospital {
                                 break;
                             }
                         }
+
+                        
                         
                         /*
                         #################################################
                         #    End of part one                            #
                         #################################################
-                        */
+                         */
                         
                         
                         if (patientFound == true) { // تم ايجاد المريض
-                            
+
                             //نختبر هل توجد خدمات ام لا
                             if (services.size() > 0) {
+                                
                                 // هنا فقط نعرض للمريض الخدمات المتاحة في النظام
                                 System.out.println("Choose one of thsee services : -");
                                 for (int i = 0; i < services.size(); i++) {
@@ -241,34 +412,57 @@ public class Hospital {
                                         // 100
                                         // بعدها ينتج لنا العدد الذي يمثل النسبة 
                                         // نقوم بخصمه من المبلغ الكبير الاجمالي فنحصل على الاجمالي بعد الخصم
-                                        int discount = ((25 * services.get(i).getPrice()) / 100);// هنا نحسب كم المبلغ المطلوب خصمة 
-                                        int total_after_discount = services.get(i).getPrice() - discount;
+                                        
+                                        int service_price = services.get(i).getPrice();
+                                        int discount = ((25 * service_price) / 100);// هنا نحسب كم المبلغ المطلوب خصمة 
+                                        
+                                        int total_after_discount = service_price - discount;
 
-                                        System.out.println(i + ")" + services.get(i).getName() + " -- " + services.get(i).getPrice() + " after discount = " + total_after_discount);
+                                        System.out.println(i + ")" + services.get(i).getName() + " -- " + service_price + " after discount = " + total_after_discount);
                                     } else {
-                                        System.out.println(i + ")" + services.get(i).getName() + " -- " + services.get(i).getPrice());
+                                        // هنا لا يحتاج الى تعديل لان المريض ليس من نوع الاول
+                                        int service_price = services.get(i).getPrice();                                        
+                                        System.out.println(i + ")" + services.get(i).getName() + " -- " + service_price);
                                     }
                                 }
-
-                                int ch = sc.nextInt();
+                                   
+                                // هنا يختار الخدمة
+                                System.out.print("Please select service : ");
+                                int ch = 0;
+                                try{
+                                    ch = sc.nextInt();
+                                }catch(Exception e){
+                                    e.printStackTrace();
+                                }
                                 
+                                
+                                // هنا نختبر الرقم اللي ادخله المستخدم اذا كان اكبر من المصفوفة نعطيه رسالة خطأ
                                 if (ch > services.size()) {
                                     System.out.println("Incorrect choose !");
                                 } else {
-
+                                    
+                                    // هنا نختبر نوع المريض 
                                     if (patients.get(patient_index).getType().toLowerCase().equals("a")) {
                                         
-                                        int discount = ((25 * services.get(ch).getPrice()) / 100);// هنا نحسب كم المبلغ المطلوب خصمة 
-                                        int total_after_discount = services.get(ch).getPrice() - discount;
+                                        int service_price = services.get(ch).getPrice();
+                                        
+                                        int discount = ((25 * service_price) / 100);// هنا نحسب كم المبلغ المطلوب خصمة 
+                                        int total_after_discount = service_price - discount;
 
-                                        Service se = services.get(ch);
+                                        Service se = services.get(ch);// هنا ناخذ نسخة من الخدمة و نضعها في اوبجيكت جديد حتى نضيفه في خدمات المريض
                                         se.setPrice(total_after_discount);// هنا السعر بعد التعديل
+                                        // فوق عدلنا على السعر علشان الخصم
+                                        
                                         patients.get(patient_index).add_service(se);
+                                        
                                     } else {
+                                        
+                                        // هنا ما يحتاج نعمل خصم على الخدمة فقط نضيفها على طول للخدمات المقدمة للمريض
                                         patients.get(patient_index).add_service(services.get(ch));
+                                        
                                     }
                                 }
-                                
+
                             } else {
                                 System.out.println("No Services found!");
                             }
@@ -277,22 +471,28 @@ public class Hospital {
                             System.out.println("******************************");
                             System.out.println("* \t\t Bill \t\t *");
                             System.out.println("******************************");
-                            
+
                             int total_bill = 0;// هنا اجمالي الفاتورة
-                            
+
+                            // نعرض جميع الخدمات مع السعر و نعطيه الاجمالي
                             for (int i = 0; i < patients.get(patient_index).getServices().size(); i++) {
+                                // هنا نعرض تفاصيل الخدمة وسعرها
                                 System.out.println("Service Name : " + patients.get(patient_index).getServices().get(i).getName() + " --- " + patients.get(patient_index).getServices().get(i).getPrice());
+                                
+                                // هنا نجمع اجمالي الفاتورة
                                 total_bill += patients.get(patient_index).getServices().get(i).getPrice();
                             }
 
-                            System.out.println("Totla Bill : " + total_bill);
                             System.out.println("*****************************");
-                            
+                            System.out.println("Total Bill : " + total_bill);
+                            System.out.println("*****************************");
+
                         } else {
                             System.out.println("Patint not found");
                         }
 
                         break;
+                        
                     case 5:
                         // هنا طباعة معلومات الأطباء
                         // ننتبه أننا استخدمنا الدالة 

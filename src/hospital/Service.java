@@ -1,21 +1,22 @@
-
 package hospital;
 
 public class Service {
+
     int ID;
     String name;
     int price;
+    private Doctor doctor;
 
     public Service() {
     }
 
-    public Service(int ID, String name, int price) {
+    public Service(int ID, String name, int price, Doctor doctor) {
         this.ID = ID;
         this.name = name;
         this.price = price;
+        this.doctor = doctor;
     }
 
-    
     public int getID() {
         return ID;
     }
@@ -40,11 +41,17 @@ public class Service {
         this.price = price;
     }
 
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
+
     @Override
     public String toString() {
-        return "ID : "+this.ID+"\nName: "+this.name+"\nPrice: "+this.price+"\n";
+        return "ID : " + this.ID + "\nName: " + this.name + "\nPrice: " + this.price + "\n";
     }
-    
-    
-    
+
 }
